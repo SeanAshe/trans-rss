@@ -134,7 +134,7 @@ def broadcast_test():
 
 
 def broadcast_update(name: str, title: str, torrent: str):
-    _broadcast(f"开始下载 {title}", f"订阅任务：{name}", torrent)
+    _broadcast(f"{title}", f"订阅任务：{name}", torrent)
 
 
 def broadcast_error(name: str, link: str):
