@@ -54,7 +54,7 @@ from urllib import parse
 def _get_magnet_hash(url : str):
     _url = parse.urlparse(url)
     parad = parse.parse_qs(_url.query)
-    return "magnet:?xt=urn:btih:" + str(parad["hash"][0])
+    return str(parad["hash"][0])
  
 
 def get(type: str):
