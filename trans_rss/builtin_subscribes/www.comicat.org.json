@@ -1,7 +1,7 @@
 {
     "builtin": true,
-    "hostname": "www.kisssub.org",
-    "example_url": "https://www.kisssub.org/rss-test.xml",
+    "hostname": "www.comicat.org",
+    "example_url": "https://www.comicat.org/rss-test.xml",
     "paths": {
         "title": [
             [

@@ -156,7 +156,7 @@ async def webhook_action(index: int, action: str):
             output.toast(f"通知测试：{type} {url}")
             await asyncio.sleep(1)
             body = webhook_types.format(
-                type, "测试 webhook 标题", "测试 webhook 订阅", "https://github.com/liyihc/trans-rss")
+                type, "测试 webhook 标题", "测试 webhook 订阅", "http://v2.uploadbt.com/?r=down&hash=fc533618f7ec651e094ce78af13b274f4ae4d53f")
             try:
                 msg = await executor.run_in_thread(partial(webhook_noti, type, url, body))
                 output.toast(f"通知成功: {type} {url}\n{msg}", color="success")

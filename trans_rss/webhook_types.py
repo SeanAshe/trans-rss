@@ -46,9 +46,16 @@ def format(type: str, title: str, sub: str, torrent: str):
     return _webhook_types.get(type).format(dict(
         title=title,
         subscribe=sub,
-        torrent=torrent
+        torrent=_get_magnet_hash(torrent)
     )).encode()
 
+from urllib import parse
+
+def _get_magnet_hash(url : str):
+    _url = parse.urlparse(url)
+    parad = parse.parse_qs(_url.query)
+    return "magnet:?xt=urn:btih:" + str(parad["hash"][0])
+ 
 
 def get(type: str):
     return _webhook_types.get(type)

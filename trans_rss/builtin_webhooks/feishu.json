@@ -19,8 +19,7 @@
                                 "text": "地址: "
                             },
                             {
-                                "tag": "a",
-                                "href": "$torrent",
+                                "tag": "text",
                                 "text": "$torrent"
                             }
                         ]
